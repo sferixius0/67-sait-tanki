@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store | Твой Ник</title>
+    <style>
+        :root {
+            --bg: #0d0d0d;
+            --card-bg: #151515;
+            --accent: #ff4d00; /* Цвет кнопок и скидок */
+            --text-main: #ffffff;
+            --text-dim: #888;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        header h1 {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin: 0;
+        }
+
+        /* Категории (как на сайте) */
+        .nav-categories {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .category-btn {
+            background: transparent;
+            border: 1px solid #333;
+            color: var(--text-dim);
+            padding: 8px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .category-btn:hover, .category-btn.active {
+            border-color: var(--accent);
+            color: white;
+        }
+
+        /* Сетка товаров */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .item-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #222;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .item-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .item-img {
+            width: 100%;
+            height: 180px;
+            background: #222; /* Заглушка под картинку */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .item-content {
+            padding: 20px;
+        }
+
+        .item-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            height: 40px;
+        }
+
+        .price-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        .new-price {
+            font-size: 1.2rem;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .buy-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: var(--accent);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .discount-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--accent);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>ANYSTORE CLONE</h1>
+</header>
+
+<div class="nav-categories">
+    <button class="category-btn active">Всё</button>
+    <button class="category-btn">Танки</button>
+    <button class="category-btn">Золото</button>
+    <button class="category-btn">Аккаунты</button>
+</div>
+
+<div class="grid">
+    <div class="item-card">
+        <div class="discount-badge">-30%</div>
+        <div class="item-img">🖼️ Картинка</div>
+        <div class="item-content">
+            <div class="item-title">Премиум Танк "Объект 777"</div>
+            <div class="price-box">
+                <span class="old-price">1500 руб.</span>
+                <span class="new-price">990 руб.</span>
+            </div>
+            <a href="https://t.me/твой_ник" class="buy-btn">Купить</a>
+        </div>
+    </div>
+
+    <div class="item-card">
+        <div class="discount-badge">-50%</div>
+        <div class="item-img">💰 Картинка</div>
+        <div class="item-content">
+            <div class="item-title">5000 Золота + Бонус</div>
+            <div class="price-box">
+                <span class="old-price">2000 руб.</span>
+                <span class="new-price">1000 руб.</span>
+            </div>
+            <a href="https://t.me/твой_ник" class="buy-btn">Купить</a>
+        </div>
+    </div>
+
+    <div class="item-card">
+        <div class="item-img">🎮 Картинка</div>
+        <div class="item-content">
+            <div class="item-title">Аккаунт со всеми топ-10</div>
+            <div class="price-box">
+                <span class="new-price">5500 руб.</span>
+            </div>
+            <a href="https://t.me/твой_ник" class="buy-btn">Купить</a>
+        </div>
+    </div>
+</div>
+
+</body>
+  </html>
+  
